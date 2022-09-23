@@ -1,0 +1,37 @@
+ACtualizar Ubunto a ultima versión
+-sudo apt update
+-sudo apt upgrade
+-sudo apt dist-upgraded
+-sudo apt autoremove
+-sudo apt install update-manager-core
+-sudo do-release-upgarde
+-lsb_release -a
+
+comando instalación MySQL
+sudo apt install mysql-server
+
+descomprimir archivo
+sudo tar -xvzf glpi-9.4.5.tgz
+
+mover archivo a carpeta
+sudo mv glpi /var/www/html
+
+sudo tar xf glpi-10.0.0.tgz -C /var/www/
+
+:/etc/apache2/mods-available#
+
+GLPI ACTUAL PRODUCCIÓN:
+sudo wget https://github.com/glpi-project/glpi/releases/download/9.4.5/glpi-9.4.5.tgz
+:/usr/share/phpmyadmin#
+
+update user set password=PASSWORD("admin") where user='root';
+
+UPDATE mysql.user SET authentication_string = PASSWORD('admin') WHERE User ='root';
+
+GLPI PROYECCIÓN FUTURA:
+wget https://github.com/glpi-project/glpi/releases/download/10.0.0/glpi-10.0.0.tgz
+
+
+
+
+/usr/share/phpmy$$/phpmyadmin/libraries/plugin_interface.lib.php

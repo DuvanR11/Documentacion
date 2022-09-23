@@ -1,0 +1,40 @@
+172.16.0.177
+user: glpi
+password: H05p1t4l2022*
+
+password sql: admin
+usuario: root
+
+http://172.16.0.177/glpi/front/central.php
+
+PROCESO ACTUALIZACIÓN
+1) Actualizamos paquetetes
+-sudo apt update
+-sudo dpkg --configure -a
+-sudo apt upgrade
+
+2) Instalar apache y Msql
+-sudo apt install apache2
+-sudo apt install mysql-server 
+-sudo service mysql start
+-sudo systemctl start apache2
+
+3)Extraer Glpi 
+-wget https://github.com/glpi-project/glpi/releases/download/9.4.5/glpi-9.4.5.tgz
+-sudo tar xf glpi-9.4.5.tgz
+-sudo mv glpi /var/www/html/
+-sudo chown www-data:www-data /var/www/html/glpi/* -R
+-sudo apt install -y php-{mbstring,curl,gd,xml,intl,ldap,apcu,xmlrpc,cas,zip,bz2}
+-sudo apt-get install php7.2-ldap php7.2-imap php7.2-curl php7.2-mbstring php7.2- gd php7.2-xmlrpc php7.2-xsl php7.2-apcu php-cas 
+-sudo systemctl reload apache2
+-sudo apt-get install nano
+-sudo service apache2 restart
+ sudo chmod ugo+rwx mysql
+
+
+/usr/share/phpmyadmin/libraries/plugin_interface.lib.php
+if ($options != null && count((array)$options) > 0) {
+
+-sudo apt-get install phpmyadmin php-mbstring php-gettext
+
+set password for 'root'@'localhost' = password('admin');
